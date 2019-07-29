@@ -1,310 +1,246 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title>EXPENSE MANAGER</title>
-	<style type="text/css">
-		#screen
-		{
-  			height:90px;
-  			width:280px;
-  			background-color:white;
-  			margin-left:50px; 
-            margin-top:2px;
-  			font-size:45px;
-		}
-        .align
-		{
-			margin-left: 200px;
-		}
-		.text_align
-		{
-            font-size: 30px;
-            margin-top: 50px;
-		}
-        .text_align_second
-		{
-			
-            margin-left: 250px;
-            font-size: 30px;
-            margin-top: 50px;
-		}
-		/* .column_2
-		{
-			margin-top: -600px;
-			width: 500px;
-			height: 650px;
-			color: white;
-			background-color: black;
-			padding: 20px;
-		} */
-		/* .float_right
-		{
-			float: right;
-		}
-		.black_box
-		{
-			margin-left: 990px;
-             */
-		}
-		.font
-		{
-			font-size: 30px;
-			font-style: bold;
-			padding-top:  40px;
-			padding-bottom: 30px;
-		}
-        .error_msg
-        {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-            color: red;
-            margin-left: 500px;
-        }
-		.submit_button
-		{
-			margin-left: 500px;
-			margin-top: 50px;
-            font-size: 35px;
-			height: 100px;
-			width: 200px;
-		}
-		.color
-		{
-			color: red;
-			margin-left: 400px;
-		}
-	
-		/* .margin_top_and_left
-		{
-			 margin for button(1,4,7) 
-			margin-top: 50px;
-			margin-left: 50px;
-		}
-		/* .margin_left_and_top
-		{
-			 margin for button(2,3,5,6,8,9) 
-			margin-top: 50px;
-			margin-left: 20px;
-		}
-		.margin_0
-		{
-			margin-top: 50px;
-			margin-left: 150px;
-		}
-        .measurement
-		{
-            height: 75px;
-			width: 75px;
-        }
-        .font_size
-		{
-            font-size: 20px;
-            color: white;
-            font-family: sans-serif;
-        }
-		.bg_black
-		{
-			background-color: black;
-		}
-        .border
-		{
-            border: 2px solid black;
-        }  */
-        .income_box
-        {
-            height: 75px;
-			width: 140px;
-			background-color:green;
-			margin-left: 80px;
-			margin-top: 18px;
-			color: black;
-            font-size: 30px;
-            text-align: center;
-        }
-		.expense_box
-		{
-			height: 75px;
-			width: 140px;
-			background-color: red;
-			margin-left: 80px;
-			margin-top: 10px;
-			color: black;
-            font-size: 30px;
-            text-align: center;
-		}
-       /* .container
-        {
-            margin-left: 50px;
-            margin-top: 18px;
-            height: 700px;
-            width: 110px;
-        } */
-        .total_salary
-        {
-            height: 75px;
-            width: 190px;
-            margin-top: 10px;
-            margin-left: 20px;
-            background-color: grey;
-            color: black;
-            font-size: 30px;
-            text-align: center;
-        }
-        .income
-        {
-            margin-top: 100px;
-            margin-left: 60px;
-            background-color: black;
-            height: 75px;
-            width: 170px;
-            color: white;
-            font-size: 19px; 
-        }
-        body
-        {
-            background-image: url("image/money.jpg")
-        }
-        .expense
-        {
-            margin-top: 100px;
-            margin-left: 350px;
-            background-color: black;
-            height: 75px;
-            width: 170px;
-            color: white;
-            font-size: 19px; 
-        }
-        .box_left
-        {
-            float: left;
-        }  
+	<head>
+		<title>Expense Manager</title>
+        <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+        <style>
+body
+{
+	margin: 0px;
+	padding: 0px;
+}
+.bg
+{
+	background-image: url(images/bg.jpg);
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+}
+.bg h1
+{
+	color: orange;
+}
+.savings
+{
+	width: 200px;
+	height: 100px;
+	background-color:rgba(0,0,0,0.5);
+	margin-left: 70px;
+	margin-top: 50px;
+	color: white;
+}
+.savings input
+{
+	height: 40px;
+	background-color: white;
+	font-size: 15px;
+ }
+.income
+{
+	width: 200px;
+	height: 100px;
+	background-color: rgba(0,0,0,0.5);
+	margin-left: 290px;
+	margin-top: -120px;
+	color: white;	
+}
+.income input
+{
+	height: 40px;
+	background-color: white;
+	font-size: 15px;
+ }
+.expense
+{
+	width: 200px;
+	height: 100px;
+	background-color: rgba(0,0,0,0.5);
+	margin-left: 510px;
+	margin-top: -120px;	
+	color: white;
+}
+.expense input
+{
+	height: 40px;
+	background-color: white;
+	font-size: 15px;
+ }
+.half1
+{
+	width: 350px;
+	height: 335px;
+	background-color: rgba(0,0,0,0.5);
+	margin-left:70px;
+	margin-top: 100px;
+	color: white;
+}
+.half1 input
+{
+	height: 40px;
+	width: 300px;
+	background-color: white;
+	font-size: 18px;
+}
+.half1 button
+{
+	background-color: #3d3d3d;
+	margin-top: 42px;
+	margin-left: 50px;
+}
+.half1 button h1
+{
+	color: white;
+}
+.half2
+{
+	width: 350px;
+	height: 335px;
+	background-color: rgba(0,0,0,0.5);
+	margin-left:420px;
+	margin-top: -356px;
+	color: white;
+}
+.half2 input
+{
+	height: 40px;
+	width: 300px;
+	background-color: white;
+	font-size: 18px;
+}
+.half2 button
+{
+	background-color: #3d3d3d;
+	margin-top: 42px;
+	margin-left: 50px;	
+}
+.half2 button h1
+{
+	color: white;
+}
 </style>
-</head>
-<body>
-        <div style="float: left">
-        <input type="text" id="total" class="total_salary" >
-        <h2 style="color: white; margin-left: 20px;">SAVINGS</h2>
-        </div style>
-        <input type="text" class="income_box font_size" id="income1"/> 
-		<input type="text" class="expense_box font_size" id="expense1"><br>
-        <!-- <input type="text" id="screen" class="border" /><br><br> -->
-        <div class="box_left" style="margin-top: 150px; margin-left: -200px;">
-            <h2 class="text_align" style="color: white" >Income Source</h2>
-            <input type="text" style="font-size: 30px; margin-top: 10px;" name="salary" id="salary" >
-            <h2 class="text_align" style="color: white">Amount</h2>
-            <input type="text" style="font-size: 30px; margin-top: 10px;" id="income" >
-        </div>
-        
-       <div style="margin-left: 330px; margin-top: 200px;">
-            <h2 class="text_align_second" style="color: white" >Expense Details</h2>
-            <input type="text" style="font-size: 30px; margin-top: 10px; margin-left: 200px; " name="expense" id="expenses" >
-            <h2 class="text_align_second" style="color: white">Amount</h2>
-            <input type="text" style="font-size: 30px; margin-top: 10px; margin-left: 200px;" id="amount" >
-    </div>
-        
-        
-    	<!-- <button class="bg_black margin_top_and_left border measurement font_size" onclick="show('1')" value="1">1</button>
-    	<button class="bg_black margin_left_and_top border measurement font_size" onclick="show('2')" value="2">2</button>
-        <button class="bg_black margin_left_and_top border measurement font_size" onclick="show('3')" value="3">3</button><br>
-     	<button class="bg_black margin_top_and_left border measurement font_size" onclick="show('4')" value="4">4 &nbsp;</button>
-    	<button class="bg_black margin_left_and_top border measurement font_size" onclick="show('5')" value="5">5</button>
-    	<button class="bg_black margin_left_and_top border measurement font_size" onclick="show('6')" value="6">6</button><br>
-    	<button class="bg_black margin_top_and_left border measurement font_size" onclick="show('7')" value="7">7</button>
-    	<button class="bg_black margin_left_and_top border measurement font_size" onclick="show('8')" value="8">8</button>
-    	<button class="bg_black margin_left_and_top border measurement font_size" onclick="show('9')" value="9">9</button><br>
-        <button class="border bg_black margin_0 measurement font_size" onclick="show('0')" value="0">0</button><br> -->
-        
-        <button class="income" onclick="income()">ADD INCOME</button>
-         <h2 style="float: right;  margin-top: -530px; margin-right: 240px; font-family: sans-serif; font-size: 21px; color: white" id="h2">INCOME DETAILS</h2> 
-        <h1 style="float: right; margin-top: -530px; font-family: sans-serif; font-size: 21px; color: white" id="h1">EXPENSE DETAILS</h1>
-        <button class="expense" onclick="expense()">SHOW EXPENSE</button>
 
-    	<script type="text/javascript">
-       		
-            
-            
-               var arr1=[];	
-			function income()
-			{	 
-               
-                 var sum=0;
-				var input1= (document.getElementById("salary").value);
-				var income1=Number(document.getElementById("income").value);
-				// var expense=Number(document.getElementById("expense").value);
-                 var total=Number(document.getElementById("total").value);
-                sum++
-				
-			/*	if(score<min_score)
-				{
-					document.getElementById("min_score").value=score;
-				}
-				else if(score>max_score)
-				{
-					document.getElementById("max_score").value=score;
-				} */
-               	
-                var para=document.createElement('p');
-                var element=document.querySelector('#h2')
-                element.appendChild(para)
-                para.textContent=input1 + '-' +income1 ;
-                arr1.push(income1);
-              /*  document.getElementById("min_score").value = Math.min.apply(null,arr);
-                document.getElementById("max_score").value = Math.max.apply(null,arr); */
-                var result=0;
-                    for(var i=0;i<arr1.length;i++)
-                    {
-                         result+=arr1[i];
-                    }
-                document.getElementById("income1").value=result;
-                var res=Number(document.getElementById("income").value);
-                document.getElementById("total").value=(res+total);
-                document.getElementById("salary").value="";
-                document.getElementById("income").value="";
-               
-			}
-            var arr2=[];
-            function expense()
-            {
-                var sum1=0;
-                var input= (document.getElementById("expenses").value);
-				var expense=Number(document.getElementById("amount").value);
-                sum1++
-                var par=document.createElement('p');
-                var element=document.querySelector('#h1')
-                element.appendChild(par)
-                par.textContent=input + '-' +expense ;
-                arr2.push(expense);
+	</head>
+	<body>
+		<div class="bg">
+			<center><strong><u><h1>Your Personal Expense Manager</h1></u></strong></center>
+				<div class="savings">
+					<center><h2>SAVINGS</h2></center>
+					<center><input type="text" id="total" class="total_salary" ></center>
+        		</div>
+        		<div class="income">
+        			<center><h2>INCOME</h2></center>
+        			<center><input type="text" class="income_box font_size" id="income1"/></center> 
+        
+        		</div>
+        		<div class="expense">
+					<center><h2>Expenses</h2></center>
+					<center><input type="text" class="expense_box font_size" id="expense"></center>
+        		</div>
+        		<div class="half1">
+        			<center><h2 class="text_align">Income Source</h2></center>
+           	 		<center><input type="text" name="expense" id="salary" ></center>
+            		<center><h2 class="text_align_second">Amount</h2></center>
+	            	<center><input type="text"  id="income" ></center>
+	            	<button class="income" onclick="income()"><h1>ADD INCOME</h1></button>
+	            	 
+        		</div>
+        		<h1 style="float: right;  margin-top: -560px; margin-right: 250px; font-family: sans-serif; font-size: 23px; color: white" id="h2">INCOME DETAILS</h1>
+        		<div class="half2">
+	        		<h2 class="text_align_second">Expense Source</h2>
+	            	<input type="text" id="expenses" >
+	            	<h2>Amount</h2>
+	            	<input type="text" id="amount" >
+	            	<button class="expense" onclick="expense()"><h1>SHOW EXPENSE</1></button>
 
-                var res=0;
-                    for(var i=0;i<arr2.length;i++)
-                    {
-                         res+=arr2[i];
-                    }
-                document.getElementById("expense1").value=res;
-                var rest=document.getElementById("total").value;
-                var result=document.getElementById("amount").value;
-                document.getElementById("total").value=(rest-result);
-                document.getElementById("expenses").value="";
-                document.getElementById("amount").value="";
-                var final=document.getElementById("total").value;
-                if(final<50000)
-                {
-                    alert("Having a good saving")
-                }
-                else if(final<30000)
-                {
-                    alert("need to save more")
-                }
-                else if(final<10000)
-                {
-                    alert("amount is very low")
-                }
-                else if(final<5000)
-                {
-                    alert("now CONTROL on EXPENSES otherwise need to BEG!!")
-                }
-            }
+        		</div>
+        		<h1 style="float: right; margin-top: -560px; font-family: sans-serif; font-size: 23px; color: white" id="h1">EXPENSE DETAILS</h1>
+        		<!-- <div class="view">
+        			<center><h1>isme shopw kr jo show krna hai wo</h1></center>
+          	    </div> -->
+	 	</div>
+
+	 	<!-- JAvaScript Part -->
+         <script type="text/javascript">
+            var arr1=[];	
+         function income()
+         {	 
+              var sum=0;
+             var input1= (document.getElementById("salary").value);
+             var income1=Number(document.getElementById("income").value);
+             // var expense=Number(document.getElementById("expense").value);
+              var total=Number(document.getElementById("total").value);
+             sum++
+             
+         /*	if(score<min_score)
+             {
+                 document.getElementById("min_score").value=score;
+             }
+             else if(score>max_score)
+             {
+                 document.getElementById("max_score").value=score;
+             } */
+                
+             var para=document.createElement('p');
+             var element=document.querySelector('#h2')
+             element.appendChild(para)
+             para.textContent=input1 + '-' +income1 ;
+             arr1.push(income1);
+           /*  document.getElementById("min_score").value = Math.min.apply(null,arr);
+             document.getElementById("max_score").value = Math.max.apply(null,arr); */
+             var result=0;
+                 for(var i=0;i<arr1.length;i++)
+                 {
+                      result+=arr1[i];
+                 }
+             document.getElementById("income1").value=result;
+             var res=Number(document.getElementById("income").value);
+             document.getElementById("total").value=(res+total);
+             document.getElementById("salary").value="";
+             document.getElementById("income").value="";   
+         }
+        
+         var arr2=[];
+         function expense()
+         {
+             var sum1=0;
+             var input= (document.getElementById("expenses").value);
+             var expense=Number(document.getElementById("amount").value);
+             sum1++
+             var par=document.createElement('p');
+             var element=document.querySelector('#h1')
+             element.appendChild(par)
+             par.textContent=input + '-' +expense ;
+             arr2.push(expense);
+
+             var res=0;
+                 for(var i=0;i<arr2.length;i++)
+                 {
+                      res+=arr2[i];
+                 }
+             document.getElementById("expense").value=res;
+             var rest=document.getElementById("total").value;
+             var result=document.getElementById("amount").value;
+             document.getElementById("total").value=(rest-result);
+             document.getElementById("expenses").value="";
+             document.getElementById("amount").value="";
+             var final=document.getElementById("total").value;
+             // if(final<50000)
+             // {
+             //     alert("Having a good saving")
+             // }
+             // else if(final<30000)
+             // {
+             //     alert("need to save more")
+             // }
+             // else if(final<10000)
+             // {
+             //     alert("amount is very low")
+             // }
+             // else if(final>0)
+             // {
+             //     alert("now CONTROL on EXPENSES otherwise need to BEG!!")
+             // }
+         }
+     </script>
     	</script>
-
-</body>
+	</body>
 </html>
